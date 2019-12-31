@@ -4,8 +4,8 @@
  * Section common with Gnome Shell
  * ... contains a few cinnamon specific styles (rare occurences)
  * ###################################################################
- * 
- * 		Customization: 
+ *
+ * 		Customization:
  * ===================================================================
  * 		1. Background colors
  * ===================================================================*/
@@ -104,6 +104,88 @@
 .popup-slider-menu-item { /* Volume slider */
 	-slider-active-background-color: #ea8400;
 }
+
+/* experimental support for grouped window list */
+.grouped-window-list-item-label {
+  font-weight: bold;
+  width: 15em;
+  min-width: 5px; }
+.grouped-window-list-item-box {
+  font-weight: bold;
+  background-image: none;
+  padding-top: 0;
+  padding-left: 8px;
+  padding-right: 8px;
+  transition-duration: 100;
+  color: rgba(255, 255, 255, 0.6); }
+  .grouped-window-list-item-box.top, .grouped-window-list-item-box.bottom {
+    border-bottom-width: 2px; }
+    .grouped-window-list-item-box.top StLabel, .grouped-window-list-item-box.bottom StLabel {
+      padding-left: 2px; }
+  .grouped-window-list-item-box.right {
+    padding-left: 0px;
+    padding-right: 0px;
+    border-right-width: 2px; }
+    .grouped-window-list-item-box.right StBin {
+      padding-right: 0; }
+  .grouped-window-list-item-box.left {
+    padding-left: 0px;
+    padding-right: 0px;
+    border-left-width: 2px; }
+    .grouped-window-list-item-box.left StBin {
+      padding-left: 1px; }
+  .grouped-window-list-item-box:hover, .grouped-window-list-item-box:focus {
+    color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.3); }
+  .grouped-window-list-item-box:active, .grouped-window-list-item-box:checked {
+    color: #ffffff;
+    border-color: #ea8400; }
+  .grouped-window-list-item-box .progress {
+    background-color: rgba(29, 142, 206, 0.8); }
+.grouped-window-list-item-demands-attention {
+  background-gradient-direction: vertical;
+  background-gradient-start: #F04A50;
+  background-gradient-end: #F04A50; }
+.grouped-window-list-thumbnail-label {
+  padding-left: 4px; }
+.grouped-window-list-number-label {
+  z-index: 99;
+  color: #464646; }
+.grouped-window-list-badge {
+  border-radius: 256px;
+  background-color: #ffffff; }
+.grouped-window-list-button-label {
+  padding-left: 4px; }
+.grouped-window-list-thumbnail-alert {
+  background: rgba(255, 52, 52, 0.3); }
+.window-list-preview,
+.grouped-window-list-thumbnail-menu {
+  color: #ffffff;
+  border: none;
+  background-color: rgba(0,0,0,0.8);
+  border-radius: 3px;
+  padding: 20px; }
+	/* disable thumbnail menu children from inheriting bg color */
+	.grouped-window-list-thumbnail-menu * {
+	  background-color: transparent; }
+  .grouped-window-list-thumbnail-menu > StBoxLayout {
+    padding: 4px; }
+  .grouped-window-list-thumbnail-menu .item-box {
+    padding: 10px;
+    border-radius: 2px;
+    spacing: 4px; }
+    .grouped-window-list-thumbnail-menu .item-box:outlined {
+      padding: 8px;
+      border: 1px solid #ea8400; }
+    .grouped-window-list-thumbnail-menu .item-box:selected {
+      color: #ffffff;
+      background-color: #ea8400;
+      border: 0px solid #ea8400; }
+  .grouped-window-list-thumbnail-menu .thumbnail {
+    width: 256px; }
+  .grouped-window-list-thumbnail-menu .separator {
+    width: 1px;
+    background: rgba(255, 255, 255, 0.2); }
 /*=====================================================================
  * the rest of the theme vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
  * ===================================================================*/
@@ -529,7 +611,7 @@ StScrollBar StButton#vhandle:hover {
  * Looking Glass
  * ===================================================================
  * Controls the styling of the dialog shown when using the inspector
- * from looking glass 
+ * from looking glass
  * ==================================================================*/
 #LookingGlassDialog
 {
