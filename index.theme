@@ -1,10 +1,12 @@
 [Desktop Entry]
 Type=X-GNOME-Metatheme
-Name=B00merang Round
+Name=B00merang Circle
 Comment=A modern flat round theme
 Encoding=UTF-8
 
 [X-GNOME-Metatheme]
-GtkTheme=B00merang Round
-MetacityTheme=B00merang Round
+GtkTheme=B00merang Circle
+MetacityTheme=B00merang Circle
+IconTheme=Numix Circle
+CursorTheme=DMZ-White
 ButtonLayout=:minimize,maximize,close
